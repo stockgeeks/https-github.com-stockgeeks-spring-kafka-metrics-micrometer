@@ -1,0 +1,22 @@
+## Micrometer Metrics are stored in Elasticsearch
+## This files contains the Elasticsearch queries to quickly lookup some metric values
+
+### List All indices:
+
+http://localhost:9200/_cat/indices?v
+
+### Show Microservices metrics index:
+
+http://localhost:9200/microservices-metrics-
+
+### Show mapping of the metrics index:
+
+http://localhost:9200/microservices-metrics-/_mapping
+
+### Elasticsearch - Show last 100 metrics:
+
+http://localhost:9200/microservices-metrics-/_search?size=100&q=*:*&sort=@timestamp:desc
+
+### Elasticsearch - Show last 100 metrics for: kafka.consumer.records.consumed.total
+
+POST http://localhost:9200/microservices-metrics-/_search?size=100&q=name:kafka_consumer_records_consumed_totalsort=@timestamp:desc
