@@ -1,4 +1,4 @@
-# Spring Kafka micrometer
+# Spring Kafka Micrometer.io example with Elasticsearch
 
 Example project to play around with Spring Kafka Consumer metrics and Micrometer.
 
